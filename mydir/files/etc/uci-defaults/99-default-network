@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# 设置LAN接口为DHCP
+uci set network.lan.proto='dhcp'
+uci set network.lan.ipaddr=''   # 清空静态 IP 地址（如果需要）
+uci set network.lan.netmask=''  # 清空静态子网掩码（如果需要）
+
+# 如果需要为WAN接口配置，请在这里添加
+# uci set network.wan.proto='dhcp'  # 设置WAN接口也为DHCP（可选）
+
+# 保存配置
+uci commit network
+
+# 设置无线配置（如果有无线接口）
+# uci set wireless.@wifi-iface[0].mode='ap'  # 设置为AP模式
+# uci set wireless.@wifi-iface[0].ssid='MyWiFi'  # 设置SSID名称
+# uci commit wireless
+
+exit 0
