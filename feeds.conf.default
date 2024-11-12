@@ -2,3 +2,6 @@ src-git-full packages https://github.com/lingfeng0303/packages.git;openwrt-22.03
 src-git-full luci https://github.com/lingfeng0303/luci.git;openwrt-22.03
 src-git-full routing https://github.com/lingfeng0303/routing.git;openwrt-22.03
 src-git-full telephony https://github.com/lingfeng0303/telephony.git;openwrt-22.03
+src-git helloworld https://github.com/lingfeng0303/helloworld.git;openwrt-22.03
+src-git passwall_packages https://github.com/lingfeng0303/openwrt-passwall-packages.git;openwrt-22.03
+src-git passwall https://github.com/lingfeng0303/openwrt-passwall.git;openwrt-22.03
