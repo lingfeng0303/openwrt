@@ -1,0 +1,4 @@
+#!/bin/sh
+# 禁用 unbound 开机启动
+/etc/init.d/unbound disable
+exit 0
