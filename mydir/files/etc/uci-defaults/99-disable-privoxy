@@ -1,0 +1,4 @@
+#!/bin/sh
+# 禁用 Privoxy 开机自启
+/etc/init.d/privoxy disable
+exit 0

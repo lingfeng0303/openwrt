@@ -1,0 +1,7 @@
+#!/bin/sh
+# 禁用 NextDNS 开机自启
+/etc/init.d/nextdns disable
+# 可选：清除 UCI 启用项（让 LuCI 不勾选）
+uci set nextdns.@nextdns[0].enabled='0'
+uci commit nextdns
+exit 0

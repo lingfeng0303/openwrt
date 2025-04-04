@@ -1,0 +1,7 @@
+#!/bin/sh
+# 禁用 Adblock 默认启用状态
+uci set adblock.global.adblock_enabled='0'
+uci commit adblock
+/etc/init.d/adblock disable
+/etc/init.d/adblock stop
+exit 0
