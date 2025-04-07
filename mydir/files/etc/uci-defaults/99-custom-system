@@ -1,0 +1,12 @@
+uci set system.@system[0].hostname='OpenWrt'
+uci set system.@system[0].timezone='CST-8'
+uci set system.@system[0].zonename='Asia/Shanghai'
+
+uci set system.ntp.enabled='1'
+uci set system.ntp.enable_server='0'
+uci add_list system.ntp.server='ntp.aliyun.com'
+uci add_list system.ntp.server='ntp1.aliyun.com'
+uci add_list system.ntp.server='ntp2.aliyun.com'
+uci add_list system.ntp.server='ntp3.aliyun.com'
+
+uci commit system

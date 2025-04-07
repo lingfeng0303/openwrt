@@ -1,0 +1,12 @@
+#!/bin/sh
+# 停止服务并禁止开机启动
+/etc/init.d/https-dns-proxy stop
+/etc/init.d/https-dns-proxy disable
+
+# 禁用所有实例
+uci show https-dns-proxy | grep '.enabled=' | sed 's/^\(.*\)=.*/uci set \1=0/' | sh
+
+# 提交更改
+uci commit https-dns-proxy
+
+exit 0
